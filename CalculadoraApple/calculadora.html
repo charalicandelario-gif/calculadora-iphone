@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Apple</title>
+
+    <!-- Conectar el archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <main class="calculadora">
+
+        <div class="pantalla">
+            <div id="operacion" class="operacion"></div>
+            <div id="resultado" class="resultado">0</div>
+        </div>
+
+        <div class="botones">
+
+            <button class="boton especial" data-action="clear">AC</button>
+            <button class="boton especial" data-action="sign">+/-</button>
+            <button class="boton especial" data-action="percent">%</button>
+            <button class="boton operador" data-operator="/">÷</button>
+
+            <button class="boton numero" data-number="7">7</button>
+            <button class="boton numero" data-number="8">8</button>
+            <button class="boton numero" data-number="9">9</button>
+            <button class="boton operador" data-operator="*">×</button>
+
+            <button class="boton numero" data-number="4">4</button>
+            <button class="boton numero" data-number="5">5</button>
+            <button class="boton numero" data-number="6">6</button>
+            <button class="boton operador" data-operator="-">−</button>
+
+            <button class="boton numero" data-number="1">1</button>
+            <button class="boton numero" data-number="2">2</button>
+            <button class="boton numero" data-number="3">3</button>
+            <button class="boton operador" data-operator="+">+</button>
+
+            <button class="boton numero cero" data-number="0">0</button>
+            <button class="boton numero" data-action="decimal">,</button>
+            <button class="boton operador" data-action="equals">=</button>
+
+        </div>
+
+        <div class="barra-inferior"></div>
+
+    </main>
+
+    <!-- Conectar el archivo JavaScript -->
+    <script src="funciones.js"></script>
+
+</body>
+</html>

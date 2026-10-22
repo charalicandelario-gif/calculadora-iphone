@@ -1,0 +1,137 @@
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #202020;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cuerpo de la calculadora */
+.calculadora {
+    width: 340px;
+    max-width: 95vw;
+    background: #000000;
+    padding: 20px 14px 12px;
+    border-radius: 38px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Pantalla */
+.pantalla {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 8px 20px;
+    overflow: hidden;
+}
+
+.operacion {
+    min-height: 25px;
+    color: #999999;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.resultado {
+    width: 100%;
+    color: #ffffff;
+    font-size: 65px;
+    font-weight: 300;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Cuadrícula de botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Estilo común */
+.boton {
+    width: 100%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.boton:active {
+    filter: brightness(1.5);
+    transform: scale(0.94);
+}
+
+/* Botones numéricos */
+.numero {
+    background: #333333;
+    color: #ffffff;
+}
+
+/* Botones de operaciones */
+.operador {
+    background: #ff9f0a;
+    color: #ffffff;
+}
+
+/* Botones especiales */
+.especial {
+    background: #a5a5a5;
+    color: #000000;
+}
+
+/* Botón cero más ancho */
+.cero {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 50px;
+    text-align: left;
+    padding-left: 27px;
+}
+
+/* Barra inferior decorativa */
+.barra-inferior {
+    width: 110px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 18px auto 0;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 360px) {
+    .calculadora {
+        padding: 15px 10px 10px;
+    }
+
+    .botones {
+        gap: 7px;
+    }
+
+    .boton {
+        font-size: 22px;
+    }
+
+    .pantalla {
+        height: 170px;
+    }
+
+    .resultado {
+        font-size: 55px;
+    }
+}
